@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="main-form">
+      <div class="form-content">
+        <div class="form-wrap">
+          <div class="heading">Login</div>
+          <form action="login" method="post">
+            <label class="col-md-4 control-label" htmlFor="email">
+              E-mail
+            </label>
+            <div class="col-md-4">
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="Email"
+                class="form-control input-md"
+                value="<%= locals.email%>"
+                required
+              />
+            </div>
+            <br />
+            <label class="col-md-4 control-label" htmlFor="password">
+              Password
+            </label>
+            <div class="col-md-4">
+              <input
+                id="password"
+                name="password"
+                type="password"
+                placeholder="Password"
+                class="form-control input-md"
+                required
+              />
+            </div>
+            <br />
+            <p class="message" style="color: red"><%= locals.message %></p>
+            <br />
+            <div class="login-btn">
+              <button>Login</button>
+            </div>
+          </form>
+          <div class="resiter-link">
+            <p>Don't have account. <br /><a href="Register">Register Now</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
